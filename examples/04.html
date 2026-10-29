@@ -3,22 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>9주차 예제 4 · flex item 속성</title>
+  <title>7주차 예제 4 · display로 성질을 바꿉니다</title>
   <style>
     /*
-    9주차 예제 4 — flex item 속성
+    7주차 예제 4 — display로 성질을 바꿉니다
     */
-    .item {
-      flex-grow: 1;      /* 남는 공간을 나눠 가진다 (0 = 안 늘어남) */
-      flex-shrink: 1;    /* 공간이 모자라면 줄어든다 (0 = 안 줄어듦) */
-      flex-basis: 220px; /* 기본 크기 */
-
-      flex: 1 1 220px;   /* 위 셋을 한 줄로 (grow shrink basis) */
-      flex: 1;           /* = flex: 1 1 0  — "균등하게 나눠 가져라" */
-
-      align-self: flex-end;  /* 이 요소만 교차축 정렬을 다르게 */
-      order: 2;              /* 순서 바꾸기 (HTML은 그대로) */
-    }
+    span { display: block; }         /* 인라인 → 블록 */
+    li   { display: inline; }        /* 블록 → 인라인 */
+    a    { display: inline-block; }  /* 옆으로 이어지되 width/height는 먹는다 */
+    .menu{ display: none; }          /* 화면에서 완전히 사라진다(자리도 없음) */
   </style>
 </head>
 <body>

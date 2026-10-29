@@ -3,20 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>9주차 예제 3 · 완벽한 가운데 정렬 — 세 줄이면 끝</title>
+  <title>7주차 예제 3 · 위아래 마진은 겹쳐서 큰 쪽만 남습니다</title>
   <style>
     /*
-    9주차 예제 3 — 완벽한 가운데 정렬 — 세 줄이면 끝
+    7주차 예제 3 — 위아래 마진은 겹쳐서 큰 쪽만 남습니다
     */
-    .center {
-      display: flex;
-      justify-content: center;   /* 가로 가운데 */
-      align-items: center;       /* 세로 가운데 */
-      height: 300px;
-    }
+    .a { margin-bottom: 30px; }
+    .b { margin-top: 20px; }
 
-    /* Flexbox 이전에는 이 간단한 것을 하려고
-       온갖 편법을 써야 했습니다. 지금은 세 줄입니다. */
+    /* .a와 .b 사이 간격은 50px이 아니라 30px입니다.
+       위아래(수직) 마진끼리는 겹칩니다 — 좌우는 겹치지 않습니다.
+       "왜 여백이 생각보다 좁지?" 할 때 이걸 의심하세요. */
   </style>
 </head>
 <body>
