@@ -3,23 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>7주차 예제 2 · width에 padding이 포함될까?</title>
+  <title>9주차 예제 2 · flex container 속성</title>
   <style>
     /*
-    7주차 예제 2 — width에 padding이 포함될까?
+    9주차 예제 2 — flex container 속성
     */
-    /* 기본값(content-box) — width는 "내용"의 폭 */
-    .box {
-      width: 200px;
-      padding: 20px;
-      border: 1px solid;
+    .container {
+      display: flex;
+
+      flex-direction: row;         /* row | column | row-reverse | column-reverse */
+
+      justify-content: center;     /* 주축 정렬
+         flex-start   ■■■□□□□□□   왼쪽 몰기 (기본)
+         center       □□□■■■□□□   가운데
+         flex-end     □□□□□□■■■   오른쪽 몰기
+         space-between ■□□■□□□□■  양끝 붙이고 사이 균등  ← 헤더에 많이 씀
+         space-around  □■□□■□□■□  각자 좌우 균등
+         space-evenly  □■□■□■□    간격 완전 균등 */
+
+      align-items: center;         /* 교차축 정렬
+         stretch(기본) | flex-start | center | flex-end | baseline */
+
+      flex-wrap: wrap;             /* 넘치면 다음 줄로 (기본은 nowrap: 찌그러짐) */
+
+      gap: 16px;                   /* 요소 사이 간격. margin보다 훨씬 편하다 */
+      gap: 16px 24px;              /* 행 간격 열 간격 */
     }
-    /* 실제 차지하는 폭 = 200 + 20 + 20 + 1 + 1 = 242px  */
-
-
-    /* border-box — width는 "테두리까지"의 폭 */
-    * { box-sizing: border-box; }
-    /* 실제 차지하는 폭 = 200px  ✓ 생각한 대로 */
   </style>
 </head>
 <body>
